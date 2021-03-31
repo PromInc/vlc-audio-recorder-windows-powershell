@@ -1,7 +1,7 @@
 # How to automate via Windows Scheduler:
 #  https://blog.netwrix.com/2018/07/03/how-to-automate-powershell-scripts-with-task-scheduler/
 # Example command for Windows Scheduler:
-#  -File C:\Users\promi\Documents\Trivia\audio-hourly\vlc-record-demo.ps1 -destinationPath " C:\Users\promi\Documents\Trivia\audio-hourly\"
+#  -File C:\Users\promi\Documents\audio-record-via-vlc.ps1 -destinationPath " C:\Users\promi\Documents\audio-clips\"
 
 # In Windows Security "Allow an app through Controlled folder access" Allow app Powershell (C:\Windows\System32\WindowsPowerShell\v1.0)
 

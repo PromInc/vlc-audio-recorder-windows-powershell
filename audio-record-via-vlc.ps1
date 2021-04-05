@@ -100,7 +100,7 @@ if( $fileName.length -gt 0 ) {
 # If directory has files already, use the latest file number as the basis for naming
 $priorClipId = 0
 if( $overwrite -eq $false -Or ($overwrite).tostring().ToLower() -eq "false" ) {
-	$dirFiles = Get-ChildItem -Recurse | Where-Object {$_.name -match "^$fileName([0-9]+)$outputExtension$"} | Sort-Object -Descending | select name -first 1
+	$dirFiles = Get-ChildItem -Path $destinationPath -Recurse | Where-Object {$_.name -match "^$fileName([0-9]+)$outputExtension$"} | Sort-Object -Descending | select name -first 1
 	if( $dirFiles ) {
 		$priorClipId = ([int]$matches[1])
 	}

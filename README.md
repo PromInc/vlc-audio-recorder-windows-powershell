@@ -2,6 +2,9 @@
 Windows Powershell audio recorder via VLC allowing for recording of subsequent audio files based on configuration.
 
 
+## TODO: documentation for windows scheduler
+
+
 ## SYNTAX
     C:\path\to\audio-record-via-vlc.ps1 [[-clips] <Int32>] [[-duration] <Int32>] [[-pauseBetween] <Int32>] [-destinationPath] <String> [[-fileName] <String>] [[-streamUrl] <String>] [[-vlcLocation]
     <String>] [[-clipNumberOffset] <Int32>] [[-overwrite] <Boolean>] [<CommonParameters>]

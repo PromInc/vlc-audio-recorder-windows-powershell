@@ -21,7 +21,7 @@ NOTE: Some of these settings may need to be adjusted per your specific setup and
     - In `Program/script:` enter `powershell`
         - You could also set the full path to the Powershell application, which on Windows 10 should be `%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe`
     - In `Add arguments (optional):` enter the command arguments that Powershell will run.
-        - Example: `-File C:\<path_to_file>\audio-record-via-vlc.ps1 -duration 60 -clips 1 -destination "C:\<path_to_save_audio_clips_to>\" -clipNumberOffset -1 -fileName "open_{year}"`
+        - Example: `-File C:\<path_to_file>\audio-record-via-vlc.ps1 -duration 60 -clips 1 -destination "C:\<path_to_save_audio_clips_to>" -clipNumberOffset -1 -fileName "open_{year}"`
         - Argument: **-File** The path to this audio recorder script on your local computer
         - All the other arguments are specific to this program and are listed below
 
@@ -64,6 +64,8 @@ NOTE: Some of these settings may need to be adjusted per your specific setup and
         A dynamic parameter of {year} can be added and will be replaced by the current year.
 
         If the directory does not exist, it will be created.
+        
+        NOTE: do not end with a trailling slash.
 
         Required?                    true
         Default value

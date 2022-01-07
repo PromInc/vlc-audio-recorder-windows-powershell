@@ -1,9 +1,29 @@
 # vlc-audio-recorder-windows-powershell
 Windows Powershell audio recorder via VLC allowing for recording of subsequent audio files based on configuration.
 
+## Schedule via Windows Scheduler
 
-## TODO: documentation for windows scheduler
+NOTE: Some of these settings may need to be adjusted per your specific setup and use.
 
+- Open `Task Scheduler`
+- Click `Create Task...`
+- On the `General` tab
+    - Enter a name
+    - Select `Run whether user is logged on or not`
+    - Check `Run with highest privileges`
+    ![image](https://user-images.githubusercontent.com/7319505/148479711-a6e3b548-7083-4caa-a211-d51b946552fc.png)
+- On the `Triggers` tab
+    - Configure as desired based on timming, login, idle, events, or other triggers.
+    - Ensure the `Enabled` checkbox is checked
+    ![image](https://user-images.githubusercontent.com/7319505/148479758-08e30fb0-1aec-4187-8dd8-cc8cb2adf1ae.png)
+- On the `Actions` tab, click `New`
+    - Set `Action` to `Start a program`
+    - In `Program/script:` enter `powershell`
+        - You could also set the full path to the Powershell application, which on Windows 10 should be `%SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe`
+    - In `Add arguments (optional):` enter the command arguments that Powershell will run.
+        - Example: `-File C:\<path_to_file>\audio-record-via-vlc.ps1 -duration 60 -clips 1 -destination "C:\<path_to_save_audio_clips_to>\" -clipNumberOffset -1 -fileName "open_{year}"`
+        - Argument: **-File** The path to this audio recorder script on your local computer
+        - All the other arguments are specific to this program and are listed below
 
 ## SYNTAX
     C:\path\to\audio-record-via-vlc.ps1 [[-clips] <Int32>] [[-duration] <Int32>] [[-pauseBetween] <Int32>] [-destinationPath] <String> [[-fileName] <String>] [[-streamUrl] <String>] [[-vlcLocation]

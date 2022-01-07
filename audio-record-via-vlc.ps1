@@ -23,6 +23,8 @@ File path to save output clips to.
 A dynamic parameter of {year} can be added and will be replaced by the current year.
 
 If the directory does not exist, it will be created.
+
+NOTE: do not end with a trailling slash.
 .PARAMETER fileName
 File name for output audio clips.
 

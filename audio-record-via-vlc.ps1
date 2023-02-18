@@ -66,7 +66,7 @@ param (
 		[int] $pauseBetween = 0,
 		[Parameter(Mandatory)][string] $destinationPath,
 		[string] $fileName = "",
-		[string] $streamUrl = "http://corn.kvsc.org:8000/broadband.m3u",
+		[string] $streamUrl = "https://corn.kvsc.org/broadband",
 		[string] $vlcLocation = "",
 		[int] $clipNumberOffset = 0,
 		[bool] $overwrite = $false

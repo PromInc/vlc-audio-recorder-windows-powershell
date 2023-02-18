@@ -84,7 +84,7 @@ NOTE: Some of these settings may need to be adjusted per your specific setup and
         Audio stream URL to record.
 
         Required?                    false
-        Default value                http://corn.kvsc.org:8000/broadband.m3u
+        Default value                https://corn.kvsc.org/broadband
 
     -vlcLocation <String>
         Path to VLC exe file.
